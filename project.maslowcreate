@@ -9,11 +9,11 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.4033512866546978,
-            "y": 0.434402332361516,
+            "x": 0.3943746259724716,
+            "y": 0.4431486880466472,
             "uniqueID": 458340,
             "ioValues": [],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2){\nreturn Cube(30, 30, 60).thin(0.25);\n}\n\nreturn main(Input1, Input2)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2){\nreturn Cube(30, 30, 60).thin().View();\n}\n\nreturn main(Input1, Input2)"
         },
         {
             "atomType": "Output",
