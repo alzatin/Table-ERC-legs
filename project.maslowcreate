@@ -10,15 +10,15 @@
         },
         {
             "name": "Taper",
-            "ioValue": 0.25
+            "ioValue": 0.5
         },
         {
             "name": "Legx",
-            "ioValue": 10
+            "ioValue": 3
         },
         {
             "name": "LegY",
-            "ioValue": 10
+            "ioValue": 5
         }
     ],
     "topLevel": true,
@@ -35,7 +35,7 @@
             "atomType": "Input",
             "name": "Taper",
             "x": 0.013333333333333334,
-            "y": 0.5335276967930029,
+            "y": 0.47521865889212833,
             "uniqueID": 272638,
             "ioValues": []
         },
@@ -50,11 +50,28 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.4287890327494288,
-            "y": 0.553935860058309,
+            "x": 0.4242193450114243,
+            "y": 0.5918367346938775,
             "uniqueID": 468518,
-            "ioValues": [],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \nInput1 = 30\n\nfunction main(Input1, Input2){\n  return Cube(Input1, 30, 60).taper(0.25, { resolution: 5 }).view();\n}\n\nreturn main(Input1, Input2)"
+            "ioValues": [
+                {
+                    "name": "Input1",
+                    "ioValue": 3
+                },
+                {
+                    "name": "Input2",
+                    "ioValue": 5
+                },
+                {
+                    "name": "Input3",
+                    "ioValue": 50
+                },
+                {
+                    "name": "Input4",
+                    "ioValue": 0.5
+                }
+            ],
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2, Input3, Input4){\n  return Cube(Input1, Input2, Input3).taper(Input4, { resolution: 5 }).view();\n}\n\nreturn main(Input1, Input2,Input3, Input4)"
         },
         {
             "atomType": "Input",
@@ -72,7 +89,42 @@
             "ioValues": []
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Input3",
+            "ap2Primary": false,
+            "ap1ID": 685123,
+            "ap2ID": 468518
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Input4",
+            "ap2Primary": false,
+            "ap1ID": 272638,
+            "ap2ID": 468518
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Input1",
+            "ap2Primary": false,
+            "ap1ID": 326513,
+            "ap2ID": 468518
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 468518
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Input2",
+            "ap2Primary": false,
+            "ap1ID": 957521,
+            "ap2ID": 468518
+        }
+    ],
     "fileTypeVersion": 1,
     "filetypeVersion": 1,
     "circleSegmentSize": "1"
