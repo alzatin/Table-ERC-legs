@@ -6,18 +6,18 @@
     "ioValues": [
         {
             "name": "Leg Length",
+            "ioValue": 50
+        },
+        {
+            "name": "Taper",
+            "ioValue": 0.25
+        },
+        {
+            "name": "Legx",
             "ioValue": 10
         },
         {
-            "name": "Leg Length",
-            "ioValue": 10
-        },
-        {
-            "name": "Leg Length",
-            "ioValue": 10
-        },
-        {
-            "name": "Leg Length",
+            "name": "LegY",
             "ioValue": 10
         }
     ],
@@ -35,7 +35,7 @@
             "atomType": "Input",
             "name": "Taper",
             "x": 0.013333333333333334,
-            "y": 0.5,
+            "y": 0.5335276967930029,
             "uniqueID": 272638,
             "ioValues": []
         },
@@ -50,8 +50,8 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.44325971058644326,
-            "y": 0.48104956268221577,
+            "x": 0.4318354912414319,
+            "y": 0.5072886297376094,
             "uniqueID": 458340,
             "ioValues": [
                 {
@@ -63,15 +63,15 @@
                     "ioValue": 10
                 },
                 {
-                    "name": "Length",
-                    "ioValue": 10
+                    "name": "length",
+                    "ioValue": 50
                 },
                 {
-                    "name": "thin",
-                    "ioValue": 10
+                    "name": "angl",
+                    "ioValue": 0.25
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Legx, LegY, Length,thin){\nreturn Cube(Legx, LegY, Length).taper(thin, { resolution: 5 }).view();\n}\n\nreturn main(Legx, LegY, Length,taper)"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Legx, LegY, length, angl){\nreturn Cube(Legx, LegY, length).taper(angl, { resolution: 5 }).view();\n}\n\nreturn main(Legx, LegY, Length,taper,angl)"
         },
         {
             "atomType": "Input",
@@ -92,14 +92,14 @@
     "allConnectors": [
         {
             "ap1Name": "number or geometry",
-            "ap2Name": "Length",
+            "ap2Name": "length",
             "ap2Primary": false,
             "ap1ID": 685123,
             "ap2ID": 458340
         },
         {
             "ap1Name": "number or geometry",
-            "ap2Name": "thin",
+            "ap2Name": "angl",
             "ap2Primary": false,
             "ap1ID": 272638,
             "ap2ID": 458340
