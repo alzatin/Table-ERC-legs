@@ -3,17 +3,83 @@
     "name": "Molecule",
     "x": 0,
     "y": 0,
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "Leg Length",
+            "ioValue": 10
+        },
+        {
+            "name": "Leg Length",
+            "ioValue": 10
+        },
+        {
+            "name": "Leg Length",
+            "ioValue": 10
+        },
+        {
+            "name": "Leg Length",
+            "ioValue": 10
+        }
+    ],
     "topLevel": true,
     "allAtoms": [
         {
+            "atomType": "Input",
+            "name": "Leg Length",
+            "x": 0.013333333333333334,
+            "y": 0.3877551020408163,
+            "uniqueID": 685123,
+            "ioValues": []
+        },
+        {
+            "atomType": "Input",
+            "name": "Taper",
+            "x": 0.013333333333333334,
+            "y": 0.5,
+            "uniqueID": 272638,
+            "ioValues": []
+        },
+        {
+            "atomType": "Input",
+            "name": "Legx",
+            "x": 0.013333333333333334,
+            "y": 0.6005830903790088,
+            "uniqueID": 326513,
+            "ioValues": []
+        },
+        {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.3945163747143945,
-            "y": 0.47521865889212833,
+            "x": 0.44325971058644326,
+            "y": 0.48104956268221577,
             "uniqueID": 458340,
-            "ioValues": [],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1, Input2){\nreturn Cube(30, 30, 60).Thin(0.25, { resolution: 5 }).view();\n}\n\nreturn main(Input1, Input2)"
+            "ioValues": [
+                {
+                    "name": "Legx",
+                    "ioValue": 10
+                },
+                {
+                    "name": "LegY",
+                    "ioValue": 10
+                },
+                {
+                    "name": "Length",
+                    "ioValue": 10
+                },
+                {
+                    "name": "thin",
+                    "ioValue": 10
+                }
+            ],
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Legx, LegY, Length,thin){\nreturn Cube(Legx, LegY, Length).taper(thin, { resolution: 5 }).view();\n}\n\nreturn main(Legx, LegY, Length,taper)"
+        },
+        {
+            "atomType": "Input",
+            "name": "LegY",
+            "x": 0.013333333333333334,
+            "y": 0.7288629737609329,
+            "uniqueID": 957521,
+            "ioValues": []
         },
         {
             "atomType": "Output",
@@ -23,7 +89,36 @@
             "ioValues": []
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Length",
+            "ap2Primary": false,
+            "ap1ID": 685123,
+            "ap2ID": 458340
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "thin",
+            "ap2Primary": false,
+            "ap1ID": 272638,
+            "ap2ID": 458340
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "Legx",
+            "ap2Primary": false,
+            "ap1ID": 326513,
+            "ap2ID": 458340
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "LegY",
+            "ap2Primary": false,
+            "ap1ID": 957521,
+            "ap2ID": 458340
+        }
+    ],
     "fileTypeVersion": 1,
     "filetypeVersion": 1,
     "circleSegmentSize": "1"
