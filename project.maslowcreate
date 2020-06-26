@@ -50,28 +50,11 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.4318354912414319,
-            "y": 0.5072886297376094,
-            "uniqueID": 458340,
-            "ioValues": [
-                {
-                    "name": "Legx",
-                    "ioValue": 10
-                },
-                {
-                    "name": "LegY",
-                    "ioValue": 10
-                },
-                {
-                    "name": "length",
-                    "ioValue": 50
-                },
-                {
-                    "name": "angl",
-                    "ioValue": 0.25
-                }
-            ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Legx, LegY, length, angl){\nreturn Cube(Legx, LegY, length).taper(angl, { resolution: 5 }).view();\n}\n\nreturn main(Legx, LegY, Length,taper,angl)"
+            "x": 0.4287890327494288,
+            "y": 0.553935860058309,
+            "uniqueID": 468518,
+            "ioValues": [],
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \nInput1 = 30\n\nfunction main(Input1, Input2){\n  return Cube(Input1, 30, 60).taper(0.25, { resolution: 5 }).view();\n}\n\nreturn main(Input1, Input2)"
         },
         {
             "atomType": "Input",
@@ -89,36 +72,7 @@
             "ioValues": []
         }
     ],
-    "allConnectors": [
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "length",
-            "ap2Primary": false,
-            "ap1ID": 685123,
-            "ap2ID": 458340
-        },
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "angl",
-            "ap2Primary": false,
-            "ap1ID": 272638,
-            "ap2ID": 458340
-        },
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "Legx",
-            "ap2Primary": false,
-            "ap1ID": 326513,
-            "ap2ID": 458340
-        },
-        {
-            "ap1Name": "number or geometry",
-            "ap2Name": "LegY",
-            "ap2Primary": false,
-            "ap1ID": 957521,
-            "ap2ID": 458340
-        }
-    ],
+    "allConnectors": [],
     "fileTypeVersion": 1,
     "filetypeVersion": 1,
     "circleSegmentSize": "1"
